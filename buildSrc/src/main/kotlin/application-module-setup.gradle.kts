@@ -1,15 +1,9 @@
-import gradle.kotlin.dsl.accessors._fc8fb4e081d484a5e0b6565145f638bd.androidTestImplementation
-import gradle.kotlin.dsl.accessors._fc8fb4e081d484a5e0b6565145f638bd.testImplementation
-
 plugins {
     id("com.android.application")
 
     // Kotlin Default
     id("org.jetbrains.kotlin.android")
     id("kotlinx-serialization")
-
-    // Kotlin Kapt [Dagger]
-    kotlin("kapt")
 
     // Kotlin Ksp [Room]
     id("com.google.devtools.ksp")
@@ -55,7 +49,7 @@ dependencies {
 
     // Dagger
     implementation(ApplicationDeps.Dagger.dagger)
-    kapt(ApplicationDeps.Dagger.compiler)
+    ksp(ApplicationDeps.Dagger.compiler)
 
     // Network
     implementation(ApplicationDeps.Ktor.ktorClient)

@@ -1,8 +1,8 @@
 plugins {
-    id("com.android.library") apply false
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("kotlinx-serialization")
-    kotlin("kapt")
+    id("com.google.devtools.ksp")
 }
 
 dependencies {
@@ -16,7 +16,7 @@ dependencies {
 
     // Dagger
     implementation(ApplicationDeps.Dagger.dagger)
-    kapt(ApplicationDeps.Dagger.compiler)
+    ksp(ApplicationDeps.Dagger.compiler)
 
     // Testing
     testImplementation(ApplicationDeps.Test.junit)

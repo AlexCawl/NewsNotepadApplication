@@ -1,6 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
     id("kotlinx-serialization")
+    id("com.google.devtools.ksp")
 }
 
 dependencies {
@@ -10,6 +11,10 @@ dependencies {
 
     // Coroutines
     implementation(ApplicationDeps.Kotlin.coroutines)
+
+    // Dagger
+    implementation(ApplicationDeps.Dagger.dagger)
+    ksp(ApplicationDeps.Dagger.compiler)
 
     // Testing
     testImplementation(ApplicationDeps.Test.junit)

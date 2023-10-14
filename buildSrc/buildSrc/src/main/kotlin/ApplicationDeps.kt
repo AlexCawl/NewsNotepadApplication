@@ -1,5 +1,5 @@
 object ApplicationDeps {
-    object Version {
+    private object Version {
         val kotlin: String = "1.9.0"
         val serialization: String = "1.5.1"
         val coroutines: String = "1.7.3"
@@ -15,7 +15,7 @@ object ApplicationDeps {
         val ktor: String = "1.5.0"
         val room: String = "2.5.2"
         val navigation: String = "2.6.0"
-        val dagger: String = "2.46.1"
+        val dagger: String = "2.48"
     }
 
     object Kotlin {
