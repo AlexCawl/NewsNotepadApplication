@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "NewsNotepadApplication"
 include(":app")
+include(":feature")

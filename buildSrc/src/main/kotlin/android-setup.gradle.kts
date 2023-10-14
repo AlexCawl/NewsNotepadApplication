@@ -21,3 +21,32 @@ dependencies {
     // Testing
     testImplementation(ApplicationDeps.Test.junit)
 }
+
+android {
+    compileSdk = ApplicationConfig.compileSdk
+    namespace = ApplicationConfig.namespace
+    buildToolsVersion = ApplicationConfig.buildToolsVersion
+    defaultConfig {
+        minSdk = ApplicationConfig.minSdk
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = ApplicationConfig.javaVersion
+        targetCompatibility = ApplicationConfig.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = ApplicationConfig.jvmTarget
+    }
+}
